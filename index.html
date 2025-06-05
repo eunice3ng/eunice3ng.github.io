@@ -1,31 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>CTF Writeups by [Your Name]</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 </head>
 <body>
-  <header>
-    <h1>CTF Writeups Blog</h1>
-    <p>Sharing my cybersecurity learning journey, one challenge at a time.</p>
+  <!-- Section 1: Header / Introduction -->
+  <header class="header-section">
+    <h1>Hi, I'm [Your Name] 👋</h1>
+    <p>Cybersecurity enthusiast sharing CTF writeups and knowledge.</p>
   </header>
-  <main>
-    <section class="blog-list">
-      <article>
-        <h2><a href="writeups/godamlah2024.html">🏁 GODAMLah 2024 - Forensics Challenge</a></h2>
-        <p class="date">April 14, 2024</p>
-        <p class="summary">Stego challenge involving base64-encoded images hidden in zip archives...</p>
+
+  <!-- Section 2: Writeups -->
+  <main class="writeups-section">
+    <h2>My CTF Writeups</h2>
+    <div class="writeup-container">
+      <article class="writeup-box">
+        <h3><a href="writeups/godamlah2024.html">GODAMLah 2024 - Forensics Challenge</a></h3>
+        <p>A steganography challenge hidden inside PNG files and ZIP archives.</p>
       </article>
-      <article>
-        <h2><a href="writeups/hackthebox2025.html">🔐 HackTheBox 2025 - BabyRSA</a></h2>
-        <p class="date">March 10, 2025</p>
-        <p class="summary">How I cracked a weak key using factorable primes and recovered the flag...</p>
+      <article class="writeup-box">
+        <h3><a href="writeups/hackthebox2025.html">HackTheBox 2025 - BabyRSA</a></h3>
+        <p>Breaking weak RSA keys to recover flags in a cryptography challenge.</p>
       </article>
-      <!-- Add more articles -->
-    </section>
+      <!-- Add more writeup-box articles here -->
+    </div>
   </main>
-  <footer>
+
+  <!-- Section 3: Footer -->
+  <footer class="footer-section">
     <p>© 2025 [Your Name] | Built with 💻 on GitHub Pages</p>
   </footer>
 </body>
