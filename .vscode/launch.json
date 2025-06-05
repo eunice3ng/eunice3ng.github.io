@@ -1,0 +1,17 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+        git config --global user.name "eunice3ng"
+        git config --global user.email "euniceeng04@gmail.com"
+  ],
+  
+    {
+      "type": "firefox",
+      "request": "launch",
+      "name": "Debug index.html in Firefox",
+      "file": "${workspaceFolder}/index.html",
+      "runtimeExecutable": "/usr/bin/firefox",
+      "webRoot": "${workspaceFolder}"
+    }
+  
+}

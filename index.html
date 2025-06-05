@@ -1,236 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cool Blogger</title>
-    <!-- Box-icon -->
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>Eunice – CTF Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-    <header>
-        <div class="nav container">
-            <a href="#" class="logo">Code <span>MyBro</span></a>
-            <a href="#" class="login">Sign Up</a>
-        </div>
-    </header>
-
-    <section class="home" id="home">
-        <div class="home-text container">
-            <h2 class="home-title">Cool Blogger</h2>
-            <span class="home-subtitle">Your source of great content</span>
-        </div>
-    </section>
-
-    <section class="about container" id="about">
-        <div class="contentBx">
-            <h2 class="titleText">Catch up with the <span>trending topics</span> </h2>
-            <p class="title-text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum eos consequuntur voluptate dolorum
-                totam provident ducimus cupiditate dolore doloribus repellat. Saepe ad fugit similique quis quam. Odio
-                suscipit incidunt distinctio.
-                <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed blanditiis libero pariatur ipsum
-                suscipit voluptates aut, repellendus quos dolor autem, natus laboriosam consectetur maxime cumque, sunt
-                magni optio? Veritatis, ea?
-            </p>
-            <a href="#" class="btn2">Read more</a>
-        </div>
-        <div class="imgBx">
-            <img src="images/about.png" alt="" class="fitBg">
-        </div>
-    </section>
-
-    <div class="post-filter container">
-        <span class="filter-item active-filter" data-filter="all">All</span>
-        <span class="filter-item" data-filter="tech">Tech</span>
-        <span class="filter-item" data-filter="food">Food</span>
-        <span class="filter-item" data-filter="news">News</span>
+  <header>
+    <div class="container">
+      <h1>younaice</h1>
+      <nav>
+        <a href="#writeups">Writeups</a>
+        <a href="#contact">Contact</a>
+        <button id="theme-toggle">🌙</button>
+      </nav>
     </div>
+  </header>
 
-    <div class="post container">
-        <!-- Post 1 -->
-        <div class="post-box tech">
-            <img src="images/img1.jpg" alt="" class="post-img">
-            <h2 class="category">Tech</h2>
-            <a href="#" class="post-title">How to create the best UI with Figma</a>
-            <span class="post-date">23 march 2025</span>
-            <p class="post-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur,
-                similique, rerum excepturi harum, vitae facilis corrupti vel modi debitis est perferendis aut quasi ea
-                unde repudiandae iste architecto. Corporis, voluptates.</p>
-            <div class="profile">
-                <img src="images/about.png" alt="" class="profile-img">
-                <span class="profile-name">AKM</span>
-            </div>
-        </div>
-        <!-- Post 2 -->
-        <div class="post-box food">
-            <img src="images/img2.jpg" alt="" class="post-img">
-            <h2 class="category">Tech</h2>
-            <a href="#" class="post-title">How to create the best UI with Figma</a>
-            <span class="post-date">12 Feb 2022</span>
-            <p class="post-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur,
-                similique, rerum excepturi harum, vitae facilis corrupti vel modi debitis est perferendis aut quasi ea
-                unde repudiandae iste architecto. Corporis, voluptates.</p>
-            <div class="profile">
-                <img src="images/about.png" alt="my_profile" class="profile-img">
-                <span class="profile-name">AKM</span>
-            </div>
-        </div>
-        <!-- Post 3 -->
-        <div class="post-box food">
-            <img src="images/img3.jpg" alt="" class="post-img">
-            <h2 class="category">Food</h2>
-            <a href="#" class="post-title">How to create the best UI with Figma</a>
-            <span class="post-date">12 Feb 2022</span>
-            <p class="post-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur,
-                similique, rerum excepturi harum, vitae facilis corrupti vel modi debitis est perferendis aut quasi ea
-                unde repudiandae iste architecto. Corporis, voluptates.</p>
-            <div class="profile">
-                <img src="images/about.png" alt="" class="profile-img">
-                <span class="profile-name">AKM</span>
-            </div>
-        </div>
-        <!-- Post 4 -->
-        <div class="post-box news">
-            <img src="images/img4.jpg" alt="" class="post-img">
-            <h2 class="category">Tech</h2>
-            <a href="#" class="post-title">How to create the best UI with Figma</a>
-            <span class="post-date">12 Feb 2022</span>
-            <p class="post-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur,
-                similique, rerum excepturi harum, vitae facilis corrupti vel modi debitis est perferendis aut quasi ea
-                unde repudiandae iste architecto. Corporis, voluptates.</p>
-            <div class="profile">
-                <img src="images/about.png" alt="" class="profile-img">
-                <span class="profile-name">AKM</span>
-            </div>
-        </div>
-        <!-- Post 5 -->
-        <div class="post-box tech">
-            <img src="images/img5.jpg" alt="" class="post-img">
-            <h2 class="category">Tech</h2>
-            <a href="#" class="post-title">How to create the best UI with Figma</a>
-            <span class="post-date">12 Feb 2022</span>
-            <p class="post-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur,
-                similique, rerum excepturi harum, vitae facilis corrupti vel modi debitis est perferendis aut quasi ea
-                unde repudiandae iste architecto. Corporis, voluptates.</p>
-            <div class="profile">
-                <img src="images/about.png" alt="" class="profile-img">
-                <span class="profile-name">AKM</span>
-            </div>
-        </div>
-        <!-- Post 6 -->
-        <div class="post-box news">
-            <img src="images/img4.jpg" alt="" class="post-img">
-            <h2 class="category">News</h2>
-            <a href="#" class="post-title">How to create the best UI with Figma</a>
-            <span class="post-date">12 Feb 2022</span>
-            <p class="post-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur,
-                similique, rerum excepturi harum, vitae facilis corrupti vel modi debitis est perferendis aut quasi ea
-                unde repudiandae iste architecto. Corporis, voluptates.</p>
-            <div class="profile">
-                <img src="images/about.png" alt="" class="profile-img">
-                <span class="profile-name">AKM</span>
-            </div>
-        </div>
-        <!-- Post 7 -->
-        <div class="post-box tech">
-            <img src="images/img7.jpg" alt="" class="post-img">
-            <h2 class="category">Tech</h2>
-            <a href="#" class="post-title">How to create the best UI with Figma</a>
-            <span class="post-date">12 Feb 2022</span>
-            <p class="post-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur,
-                similique, rerum excepturi harum, vitae facilis corrupti vel modi debitis est perferendis aut quasi ea
-                unde repudiandae iste architecto. Corporis, voluptates.</p>
-            <div class="profile">
-                <img src="images/about.png" alt="" class="profile-img">
-                <span class="profile-name">AKM</span>
-            </div>
-        </div>
-        <!-- Post 1 -->
-        <div class="post-box news">
-            <img src="images/img8.jpg" alt="" class="post-img">
-            <h2 class="category">News</h2>
-            <a href="#" class="post-title">How to create the best UI with Figma</a>
-            <span class="post-date">12 Feb 2022</span>
-            <p class="post-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur,
-                similique, rerum excepturi harum, vitae facilis corrupti vel modi debitis est perferendis aut quasi ea
-                unde repudiandae iste architecto. Corporis, voluptates.</p>
-            <div class="profile">
-                <img src="images/about.png" alt="" class="profile-img">
-                <span class="profile-name">AKM</span>
-            </div>
-        </div>
-        <!-- Post 9 -->
-        <div class="post-box food">
-            <img src="images/img10.jpg" alt="" class="post-img">
-            <h2 class="category">Food</h2>
-            <a href="#" class="post-title">How to create the best UI with Figma</a>
-            <span class="post-date">12 Feb 2022</span>
-            <p class="post-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur,
-                similique, rerum excepturi harum, vitae facilis corrupti vel modi debitis est perferendis aut quasi ea
-                unde repudiandae iste architecto. Corporis, voluptates.</p>
-            <div class="profile">
-                <img src="images/about.png" alt="" class="profile-img">
-                <span class="profile-name">AKM</span>
-            </div>
-        </div>
+  <section class="intro">
+    <div class="container">
+      <h2>Hello, I'm Eunice</h2>
+      <p>I'm a Computer and System Network student passionate in CTF competitions</p>
+      <p>I write about CTFs, cybersecurity puzzles, and forensics techniques I learn from competitions.</p>
     </div>
+  </section>
 
-    <footer>
-        <div class="footer-container">
-            <div class="sec aboutus">
-                <h2>About Us</h2>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus quisquam minus quo illo numquam vel
-                    incidunt pariatur hic commodi expedita tempora praesentium at iure fugiat ea, quam laborum aperiam
-                    veritatis.</p>
-                <ul class="sci">
-                    <li><a href="#"><i class="bx bxl-facebook"></i></a></li>
-                    <li><a href="#"><i class="bx bxl-instagram"></i></a></li>
-                    <li><a href="#"><i class="bx bxl-twitter"></i></a></li>
-                    <li><a href="#"><i class="bx bxl-linkedin"></i></a></li>
-                </ul>
-            </div>
-            <div class="sec quicklinks">
-                <h2>Quick Links</h2>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                </ul>
-            </div>
-            <div class="sec contactBx">
-                <h2>Contact Info</h2>
-                <ul class="info">
-                    <li>
-                        <span><i class='bx bxs-map'></i></span>
-                        <span>Thata, Ugrasenpur <br>Handia, prayagraj 212405<br>India</span>
-                    </li>
-                    <li>
-                        <span><i class='bx bx-envelope'></i></span>
-                        <p><a href="https://mail.google.com/mail/?view=cm&fs=1&to=amitkumarmaurya10122005@gmail.com"
-                                target="_blank" style="text-decoration: none;">
-                                <button
-                                    style="background-color: aqua; color: rgb(38, 39, 56); padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Contact
-                                    Me</button>
-                            </a>
+  <section id="writeups" class="writeups">
+    <div class="container">
+      <h2>CTF Writeups</h2>
 
-                    </li>
-                </ul>
-            </div>
+      <input type="text" id="search" placeholder="Search writeups..." />
+
+      <div class="card-grid" id="writeup-cards">
+        <div class="card">
+          <a href="question.html?comp=picoCTF">
+            <h3>picoCTF – Forensics</h3>
+            <p>Find hidden clues by examining files and data. Use basic tools to uncover secrets and solve puzzles.</p>
+            <span class="tag">Apr 2025</span>
+          </a>
         </div>
-    </footer>
+        <div class="card">
+          <a href="blog/nahomCTF-2025.html">
+            <h3>nahomCTF 2025 </h3>
+            <p>Recovering primes and solving RSA with a common modulus.</p>
+            <span class="tag">May 2025</span>
+          </a>
+        </div>
+        <div class="card">
+          <a href="blog/haha-2025.html">
+            <h3>haha 2025 </h3>
+            <p>Recovering primes and solving RSA with a common modulus.</p>
+            <span class="tag">May 2025</span>
+          </a>
+        </div>
+        <div class="card">
+          <a href="blog/nahomCTF-2025.html">
+            <h3>nahomCTF 2025 </h3>
+            <span class="badge badge-hard">Hard</span>
+            <p>Recovering primes and solving RSA with a common modulus.</p>
+            <span class="tag">May 2025</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
-    integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <!-- scroll reveal  -->
-    <script src="https://unpkg.com/scrollreveal"></script>  
-    <script src="script.js"></script>
-   
+  <footer id="contact">
+    <div class="container">
+      <p>Made with 💻 by Eunice Eng.</p>
+      <p>Email: <a href="mailto:euniceeng04@gmail.com">euniceeng04@gmail.com</a></p>
+      <p>GitHub: <a href="https://github.com/eunice3ng">eunice3ng</a></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
-
 </html>

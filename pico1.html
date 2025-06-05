@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Challenge Writeup - Web Exploit 101</title>
+  <link rel="stylesheet" href="pico1.css" />
+</head>
+<body>
+  <header>
+    <h1>Web Exploit 101</h1>
+    <p class="subtitle">CTF 2023 — Difficulty: Easy</p>
+    <a href="question.html?comp=picoCTF" class="back-link">← Back to Questions</a>
+  </header>
+
+  <main>
+    <section class="writeup-intro">
+      <h2>Challenge Description</h2>
+      <p>This challenge involves exploiting a simple SQL Injection vulnerability in a login form.</p>
+    </section>
+
+    <section class="writeup-steps">
+      <h2>Writeup Steps</h2>
+      <ol>
+        <li>Analyzed the login form and noticed user inputs are not sanitized.</li>
+        <li>Injected `' OR '1'='1` to bypass authentication.</li>
+        <li>Accessed the admin panel and retrieved the flag.</li>
+      </ol>
+    </section>
+
+    <section class="writeup-flag">
+      <h2>Flag</h2>
+      <pre><code>dam{sql_injection_success}</code></pre>
+    </section>
+
+    <section class="writeup-conclusion">
+      <h2>Conclusion</h2>
+      <p>This challenge is a classic example of why input validation is critical.</p>
+    </section>
+  </main>
+</body>
+</html>
