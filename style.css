@@ -1,15 +1,20 @@
 body {
+  background-color: #111;
+  color: #eee;
   font-family: 'Courier New', monospace;
-  background-color: #0f0f0f;
-  color: #d1d1d1;
   margin: 0;
   padding: 0;
 }
 
-header, footer {
-  background-color: #1f1f1f;
-  padding: 20px;
+header {
+  background: #1a1a1a;
+  padding: 30px;
   text-align: center;
+  border-bottom: 2px solid #333;
+}
+
+h1, h2 {
+  color: #00ffcc;
 }
 
 a {
@@ -21,11 +26,29 @@ a:hover {
   text-decoration: underline;
 }
 
-main {
+.blog-list {
   padding: 20px;
+  max-width: 800px;
+  margin: auto;
 }
 
-ul {
-  list-style-type: none;
-  padding: 0;
+article {
+  margin-bottom: 30px;
+  padding: 20px;
+  background: #222;
+  border-left: 4px solid #00ffff;
+  border-radius: 8px;
+}
+
+.date {
+  font-size: 0.9em;
+  color: #888;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #1a1a1a;
+  font-size: 0.9em;
+  color: #666;
 }
