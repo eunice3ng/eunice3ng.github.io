@@ -2,27 +2,34 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>HackTheBox CTF 2025 Writeup</title>
+  <title>GODAMLah 2024 - Forensics</title>
   <link rel="stylesheet" href="../style.css">
 </head>
 <body>
   <header>
-    <h1>HackTheBox CTF 2025</h1>
-    <p>by [Your Name]</p>
+    <h1>GODAMLah 2024 - Forensics Challenge</h1>
+    <p class="date">April 14, 2024</p>
   </header>
   <main>
-    <h2>Challenge: Crypto - BabyRSA</h2>
-    <p>Description: ...</p>
-    <pre>
-      n = ...
-      e = ...
-      c = ...
-    </pre>
-    <p>Solution: ...</p>
-    <p>Flag: <code>dam{example_flag}</code></p>
+    <section class="writeup">
+      <h2>Challenge Overview</h2>
+      <p>A zip file was given containing a suspicious PNG. We suspected steganography...</p>
+
+      <h2>Steps Taken</h2>
+      <ol>
+        <li>Ran `binwalk` on the image</li>
+        <li>Extracted hidden ZIP from footer</li>
+        <li>Used steghide to extract embedded message</li>
+      </ol>
+
+      <h2>Flag</h2>
+      <p><code>dam{hidden_bytes_were_here}</code></p>
+
+      <p><a href="../index.html">← Back to Blog</a></p>
+    </section>
   </main>
   <footer>
-    <p><a href="../index.html">← Back to Home</a></p>
+    <p>© 2025 [Your Name]</p>
   </footer>
 </body>
 </html>
