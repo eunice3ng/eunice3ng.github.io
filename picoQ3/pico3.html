@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Challenge Writeup - DISKO 1</title>
+  <link rel="stylesheet" href="pico1.css" />
+</head>
+<body>
+  <header>
+    <h1>DISKO 1</h1>
+    <p class="subtitle">picoCTF — Difficulty: Easy</p>
+    <a href="../question-list/question.html?comp=picoCTF" class="back-link">← Back to Questions</a>
+  </header>
+
+  <main>
+    <section class="writeup-intro">
+      <h2>Challenge Description</h2>
+      <p>Can you find the flag in this disk image? Download the disk image here. </p>
+    </section>
+
+    <section class="writeup-steps">
+  <h2>Writeup Steps</h2>
+  <ol>
+    
+    <li>
+      First, I check the file type, the file is compressed. I decompressed it with <code>gunzip</code>.
+      <div class="img-box">
+        <img src="Q3_1.png" alt="check file type">
+        <p>I check again the file type to ensure there's no more compressed file.</p>
+      </div>
+    </li>
+    <li>
+      I use <code>binwalk</code> to suspect a file with embedded or concatenated file
+      <div class="img-box">
+        <img src="Q3_2.png" alt="binwalk output">
+        <img src="Q3_3.png" alt="binwalk output">
+        <p>Based on the output, there's like ten or hundred thousand data, so impossible I track each of them one by one</p>
+      </div>
+    </li>
+    <li>
+      Based on the output, there's a lot of documents footer. Hence, I use <code>Strings</code> to get the flag 
+      <div class="img-box">
+        <img src="Q3_4.png" alt="Flag">
+        <p>But before using Strings, i use exiftool to check if there's any comment for this file</p>
+      </div>
+    </li>
+    
+  </ol>
+</section>
+
+    <section class="writeup-flag">
+      <h2>Flag</h2>
+      <pre><code>picoCTF{1t5_ju5t_4_5trin9_c63b02ef}</code></pre>
+    </section>
+
+    <section class="writeup-conclusion">
+      <h2>Conclusion</h2>
+      <p>This challenge is a classic example of why input validation is critical.</p>
+    </section>
+  </main>
+</body>
+</html>

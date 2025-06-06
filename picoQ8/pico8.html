@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Challenge Writeup - introduction</title>
+  <link rel="stylesheet" href="pico1.css" />
+</head>
+<body>
+  <header>
+    <h1>introduction</h1>
+    <p class="subtitle">picoCTF — Difficulty: Easy</p>
+    <a href="../question-list/question.html?comp=picoCTF" class="back-link">← Back to Questions</a>
+  </header>
+
+  <main>
+    <section class="writeup-intro">
+      <h2>Challenge Description</h2>
+      <p>Files can always be changed in a secret way. Can you find the flag? cat.jpg </p>
+    </section>
+
+    <section class="writeup-steps">
+  <h2>Writeup Steps</h2>
+  <ol>
+  
+    <li>
+      Awwwww cute cat given from the question.
+      <div class="img-box">
+        <img src="Q8_1.png" alt="file given">
+      </div>
+    </li>
+    <li>
+      First, check the file type
+      <div class="img-box">
+        <img src="Q8_2.png" alt="check file type">
+        <p>Yes, it's an image</p>
+      </div>
+    </li>
+    <li>
+      Then check the image with exiftool to get its metadata. Well, I saw something familiar, the flag format :<code>cGljb0NUR</code>. I guess i found it.
+      <div class="img-box">
+        <img src="Q8_3.png" alt="exiftool">
+        
+        <p>Although there's no == at the end of the strings, but ya, i will bake it</p>
+      </div>
+    </li>
+    
+    <li>
+      Yes, it's the flag
+      <div class="img-box">
+        <img src="Q8_4.png" alt="flag">
+        
+      </div>
+    </li>
+    
+  </ol>
+</section>
+
+    <section class="writeup-flag">
+      <h2>Flag</h2>
+      <pre><code>picoCTF{the_m3tadata_1s_modified}</code></pre>
+    </section>
+
+    <section class="writeup-conclusion">
+      <h2>Conclusion</h2>
+      <p>This challenge is a classic example of why input validation is critical.</p>
+    </section>
+  </main>
+</body>
+</html>

@@ -8,29 +8,78 @@
 </head>
 <body>
   <header>
-    <h1>Web Exploit 101</h1>
-    <p class="subtitle">CTF 2023 — Difficulty: Easy</p>
-    <a href="question.html?comp=picoCTF" class="back-link">← Back to Questions</a>
+    <h1>Ph4nt0m 1ntrud3r</h1>
+    <p class="subtitle">picoCTF — Difficulty: Easy</p>
+    <a href="../question-list/question.html?comp=picoCTF" class="back-link">← Back to Questions</a>
   </header>
+
 
   <main>
     <section class="writeup-intro">
       <h2>Challenge Description</h2>
-      <p>This challenge involves exploiting a simple SQL Injection vulnerability in a login form.</p>
+      <p>A digital ghost has breached my defenses, and my sensitive data has been stolen! 😱💻 Your mission is to uncover 
+        how this phantom intruder infiltrated my system and retrieve the hidden flag. To solve this challenge, you'll need to 
+        analyze the provided PCAP file and track down the attack method. The attacker has cleverly concealed his moves in well timely manner. 
+        Dive into the network traffic, apply the right filters and show off your forensic prowess and unmask the digital intruder! Find the PCAP file 
+        here Network Traffic PCAP file and try to get the flag. </p>
     </section>
 
     <section class="writeup-steps">
-      <h2>Writeup Steps</h2>
-      <ol>
-        <li>Analyzed the login form and noticed user inputs are not sanitized.</li>
-        <li>Injected `' OR '1'='1` to bypass authentication.</li>
-        <li>Accessed the admin panel and retrieved the flag.</li>
-      </ol>
-    </section>
+  <h2>Writeup Steps</h2>
+  <ol>
+    <li>
+      Open `myNetworkTraffic.pcap` file using Wireshark. I always use Wireshark for `.pcap` files.
+    </li>
+    <li>
+      After accessing Wireshark, we can see the first packet has ASCII ending with `==`.
+      <div class="img-box">
+        <img src="Q1_3.png" alt="Wireshark packet with == string">
+        <p>Bottom-right: string <code>ezF0X3c0cw==</code> — base64 usually ends with <code>==</code>.</p>
+      </div>
+    </li>
+    <li>
+      Let's check if it's part of the flag.
+      <div class="img-box">
+        <img src="Q1_3.png" alt="Base64 flag preview">
+        <p>Seems like part of the flag. Let's search for more base64 strings.</p>
+      </div>
+    </li>
+    <li>
+      While checking other traffic, I found strings ending with just <code>=</code> instead of <code>==</code>.
+      <div class="img-box">
+        <img src="Q1_6.png" alt="Equals in hex dump">
+        <img src="Q1_7.png" alt="Another hex with =">
+        <img src="Q1_8.png" alt="Third example">
+        <p>I noticed that only packets where length ≠ 48 end with <code>==</code>, so those might hold the flag.</p>
+      </div>
+    </li>
+    
+    <li>
+      I extracted those packets and found the flag segments are out of order.
+      <div class="img-box">
+        <img src="Q1_9.png" alt="Out of order flag segments">
+        <p>Since flag format is <code>picoCTF{...}</code>, we look for that pattern.</p>
+      </div>
+    </li>
+    <li>
+      The packet with the smallest <strong>Time</strong> had <code>picoCTF</code> in it.
+      <div class="img-box">
+        <img src="Q1_10.png" alt="Timestamp order">
+        <p>I then sorted packets by ascending timestamp.</p>
+      </div>
+    </li>
+    <li>
+      Finally, I got the full flag!
+      <div class="img-box">
+        <img src="Q1_11.png" alt="Final flag">
+      </div>
+    </li>
+  </ol>
+</section>
 
     <section class="writeup-flag">
       <h2>Flag</h2>
-      <pre><code>dam{sql_injection_success}</code></pre>
+      <pre><code>picoCTF{1t_w4snt_th4t_34sy_tbh_4r_d1065384}</code></pre>
     </section>
 
     <section class="writeup-conclusion">

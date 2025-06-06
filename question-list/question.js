@@ -1,8 +1,14 @@
 const data = {
   picoCTF: [
-    { id: 'pico1', name: 'Web Exploit 101' },
-    { id: 'pico2', name: 'Stego Challenge' },
-    { id: 'pico3', name: 'Crypto Puzzle' }
+    { id: 'pico1', name: 'Ph4nt0m 1ntrud3r' },
+    { id: 'pico2', name: 'RED' },
+    { id: 'pico3', name: 'DISKO 1' },
+    { id: 'pico4', name: 'Verify' },
+    { id: 'pico5', name: 'Scan Surprise' },
+    { id: 'pico6', name: 'Secret of the Polygot' },
+    { id: 'pico7', name: 'CanYouSee' },
+    { id: 'pico8', name: 'information' },
+    { id: 'pico9', name: 'Glory of the Garden' }
   ]
 };
 
@@ -13,9 +19,13 @@ const questionListEl = document.getElementById('question-list');
 
 if (comp && data[comp]) {
   data[comp].forEach(question => {
+    // Extract the number from the question ID, e.g., "pico1" → "1"
+    const number = question.id.match(/\d+/)?.[0];
+    const folderName = `picoQ${number}`;
+    const link = `../${folderName}/${question.id}.html?comp=${comp}&id=${question.id}`;
+
     const li = document.createElement('li');
-    // Assuming your writeups are named like pico1.html, pico2.html, etc
-    li.innerHTML = `<a href="${question.id}.html?comp=${comp}&id=${question.id}">${question.name}</a>`;
+    li.innerHTML = `<a href="${link}">${question.name}</a>`;
     questionListEl.appendChild(li);
   });
 } else {

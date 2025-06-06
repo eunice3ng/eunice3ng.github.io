@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Challenge Writeup - Verify</title>
+  <link rel="stylesheet" href="pico1.css" />
+</head>
+<body>
+  <header>
+    <h1>Verify</h1>
+    <p class="subtitle">picoCTF — Difficulty: Easy</p>
+    <a href="../question-list/question.html?comp=picoCTF" class="back-link">← Back to Questions</a>
+  </header>
+
+  <main>
+    <section class="writeup-intro">
+      <h2>Challenge Description</h2>
+      <p>People keep trying to trick my players with imitation flags. I want to make sure they get the real thing! 
+        I'm going to provide the SHA-256 hash and a decrypt script to help you know that my flags are legitimate. 
+        ssh -p 57825 ctf-player@rhea.picoctf.net Using the password f3b61b38. Accept the fingerprint with yes, and 
+        ls once connected to begin. Remember, in a shell, passwords are hidden! Checksum: 
+        fba9f49bf22aa7188a155768ab0dfdc1f9b86c47976cd0f7c9003af2e20598f7 To decrypt the file once you've verified 
+        the hash, run ./decrypt.sh files/<file>.
+ </p>
+    </section>
+
+    <section class="writeup-steps">
+  <h2>Writeup Steps</h2>
+  <ol>
+    <li>
+      Copy and paste the network protocol given into terminal
+    </li>
+    <li>
+      Type "yes", and copy the password given by question into the terminal, then enter.
+      <div class="img-box">
+        <img src="Q4_1.png" alt="Type yes">
+        <img src="Q4_2.png" alt="Enter password">
+      </div>
+    </li>
+    <li>
+      Now we have logged into the secure shell.
+      <div class="img-box">
+        <img src="Q4_3.png" alt="welcoming page">
+      </div>
+    </li>
+    <li>
+      Since, question mentioned <code>ls</code> once is connected, so I use <code>ls</code> to check the file or directory in it.
+      <div class="img-box">
+        <img src="Q4_4.png" alt="check file and directory">
+        <p>There's checksum.txt which is same as question given;decrypt.sh;files(directory)</p>
+        <p>Then I found out there's a lot of file in this directory</p>
+      </div>
+    </li>
+    
+    <li>
+      While for decrypt.sh, I google for this.
+      <div class="img-box">
+        <img src="Q4_5.png" alt="file end with .sh">
+        <p>It shows that .sh file contains operation or function to execute the program</p>
+      </div>
+    </li>
+    <li>
+      Thus, I write a line of code to loop each of the data and decrypt the data by using the decrypt.sh.
+      <div class="img-box">
+        <img src="Q4_6.png" alt="check the data">
+      </div>
+    </li>
+    <li>
+      Ah yes, the flag is thereeeee
+      <div class="img-box">
+        <img src="Q4_7.png" alt="flag">
+      </div>
+    </li>
+  </ol>
+</section>
+
+    <section class="writeup-flag">
+      <h2>Flag</h2>
+      <pre><code>picoCTF{trust_but_verify_87590c24}</code></pre>
+    </section>
+
+    <section class="writeup-conclusion">
+      <h2>Conclusion</h2>
+      <p>This challenge is a classic example of why input validation is critical.</p>
+    </section>
+  </main>
+</body>
+</html>
