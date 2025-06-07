@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Challenge Writeup - CanYouSee</title>
+  <link rel="stylesheet" href="pico1.css" />
+</head>
+<body>
+  <header>
+    <h1>CanYouSee</h1>
+    <p class="subtitle">picoCTF — Difficulty: Easy</p>
+    <a href="../../picoCTF-list/question.html?comp=picoCTF" class="back-link">← Back to Questions</a>
+  </header>
+
+  <main>
+    <section class="writeup-intro">
+      <h2>Challenge Description</h2>
+      <p>How about some hide and seek? Download this file here. </p>
+    </section>
+
+    <section class="writeup-steps">
+  <h2>Writeup Steps</h2>
+  <ol>
+    <li>
+      Question given a file named: unknown zip. Unzip it.
+      <div class="img-box">
+        <img src="Q7_1.png" alt="unzip the file given">
+        <p>Then we get an image (I have checked its file type to make sure this is a true .jpg)</p>
+      </div>
+    </li>
+    <li>
+      I use exiftool to check on the metadata to look for something weird, and yea I found a base 64 strings
+      <div class="img-box">
+        <img src="Q7_2.png" alt=" base 64 strings == ">
+        <p>Decrypt it</p>
+      </div>
+    </li>
+    <li>
+      Got the flag
+      <div class="img-box">
+        <img src="Q7_3.png" alt="flag">
+      </div>
+    </li>
+    
+  </ol>
+</section>
+
+    <section class="writeup-flag">
+      <h2>Flag</h2>
+      <pre><code>picoCTF{ME74D47A_HIDD3N_4dabddcb}</code></pre>
+    </section>
+
+    <section class="writeup-conclusion"></section>
+  </main>
+</body>
+</html>

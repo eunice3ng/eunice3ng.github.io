@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Challenge Writeups: deep-layers</title>
+  <link rel="stylesheet" href="tjctf.css" />
+</head>
+<body>
+  <header>
+    <h1>deep-layers</h1>
+    <p class="subtitle">TJCTF Category: Forensics</p>
+    <a href="../../tjctf-list/question.html?comp=tjctf" class="back-link">← Back to Questions</a>
+  </header>
+
+  <main>
+    <section class="writeup-intro">
+      <h2>Challenge Description</h2>
+      <p>Not everything ends where it seems to...</p>
+    </section>
+
+    <section class="writeup-steps">
+  <h2>Writeup Steps</h2>
+  <ol>
+    
+    <li>
+      We got chall.png from the question.Use zsteg and inspect it. 
+      <div class="img-box">
+        <img src="Q2_1.png" alt="file given">
+        <p>Got a string ended with ==</p>
+      </div>
+    </li>
+    <li>
+      Bake it, got a text "p0lygl0tp3ssw0rd"
+      <div class="img-box">
+        <img src="Q2_2.png" alt="password">
+        
+      </div>
+    </li>
+    <li>
+      Use binwalk to search for embedded file
+      <div class="img-box">
+        <img src="Q2_3.png" alt="find hidden data">
+        <img src="Q2_4.png" alt="find hidden data">
+        
+      </div>
+    </li>
+    <li>
+      Get into the directory where file extracted, then got a zip file named <code>77.zip</code>. Unzip it.
+      <div class="img-box">
+        <img src="Q2_5.png" alt="unzip the file">
+        <p>Enter the password : p0lygl0tp3ssw0rd </p>
+      </div>
+    </li>
+    
+    <li>
+       gunzip the secret.gz, then read the secret file
+      <div class="img-box">
+        <img src="Q2_6.png" alt="flag">
+        <p> got the flag~</p>
+      </div>
+    </li>
+    
+  </ol>
+</section>
+
+    <section class="writeup-flag">
+      <h2>Flag</h2>
+      <pre><code>tjctf{p0lygl0t_r3bb1t_h0l3}</code></pre>
+    </section>
+
+    <section class="writeup-conclusion">
+      <h2>Conclusion</h2>
+      <p>Tools used:</p>
+      <ul>
+        <li>zsteg</li>
+        <li>binwalk</li>
+        <li>cyberchef : <a href ="https://gchq.github.io/CyberChef/" target="_blank">Click here</a></li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>

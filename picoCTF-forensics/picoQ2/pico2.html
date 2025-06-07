@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Challenge Writeup - RED</title>
+  <link rel="stylesheet" href="pico1.css" />
+</head>
+<body>
+  <header>
+    <h1>RED</h1>
+    <p class="subtitle">picoCTF — Difficulty: Easy</p>
+    <a href="../../picoCTF-list/question.html?comp=picoCTF" class="back-link">← Back to Questions</a>
+  </header>
+
+  <main>
+    <section class="writeup-intro">
+      <h2>Challenge Description</h2>
+      <p>RED, RED, RED, RED </p>
+      <p>Download the image: red.png </p>
+    </section>
+
+    <section class="writeup-steps">
+  <h2>Writeup Steps</h2>
+  <ol>
+    
+    <li>
+      The following picture show the file given.
+      <div class="img-box">
+        <img src="Q2_1.png" alt="file given">
+        <p>Open with image-editor</p>
+      </div>
+    </li>
+    <li>
+      First, I use exiftool to check the metadata of the file
+      <div class="img-box">
+        <img src="Q2_2.png" alt="Metadata of the file">
+        <p>Extensions all looks normal</p>
+      </div>
+    </li>
+    <li>
+      Then I use <code>zsteg</code> to identify is there any hidden data in the image
+      <div class="img-box">
+        <img src="Q2_3.png" alt="find hidden data">
+        <p>A few lines of string in red color end with ==, a base64 strings</p>
+      </div>
+    </li>
+    
+    <li>
+      I bake it, then got it
+      <div class="img-box">
+        <img src="Q2_4.png" alt="flag">
+        
+      </div>
+    </li>
+    
+  </ol>
+</section>
+
+    <section class="writeup-flag">
+      <h2>Flag</h2>
+      <pre><code>picoCTF{r3d_1s_th3_ult1m4t3_cur3_fOr_54dn355_}</code></pre>
+    </section>
+
+    <section class="writeup-conclusion">
+      <h2>Conclusion</h2>
+      <p>This challenge is an easy challenge to inspect image.</p>
+      <p>Usually I inspect with:</p>
+      <ul>
+        <li>file: check file type</li>
+        <li>exiftool: extract metadata</li>
+        <li>binwalk: extract data or suspect embedded file</li>
+        <li>zsteg: will use it for png file</li>
+        <li>hexeditor: to display file content as hex value</li>
+        <p>and more....</p>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>

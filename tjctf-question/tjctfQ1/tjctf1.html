@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Challenge Writeups: hidden-message</title>
+  <link rel="stylesheet" href="tjctf.css" />
+</head>
+<body>
+  <header>
+    <h1>hidden-message</h1>
+    <p class="subtitle">TJCTF Category: Forensics</p>
+    <a href="../../tjctf-list/question.html?comp=tjctf" class="back-link">← Back to Questions</a>
+  </header>
+
+  <main>
+    <section class="writeup-intro">
+      <h2>Challenge Description</h2>
+      <p>i found this suspicious image file on my computer. can you help me figure out what's hidden inside?</p>
+    </section>
+
+    <section class="writeup-steps">
+  <h2>Writeup Steps</h2>
+  <ol>
+    
+    <li>
+      We got suspicious.png from the question.Check the file type, then use exiftool to check its metadata 
+      <div class="img-box">
+        <img src="Q1_1.png" alt="file given">
+        <p>Nothing found</p>
+      </div>
+    </li>
+    <li>
+      Binwalk to check any file that can be extracted.
+      <div class="img-box">
+        <img src="Q1_2.png" alt="binwalk">
+      </div>
+    </li>
+    <li>
+      Binwalk to check any file that can be extracted, then got a file 29. There is lots of noise there, and I got nothing when
+      searching with <code>Strings</code>. Then I use <code>zsteg</code>, and got the flag successfully.
+      <div class="img-box">
+        <img src="Q1_3.png" alt="flag">
+      </div>
+    </li>
+    
+  </ol>
+</section>
+
+    <section class="writeup-flag">
+      <h2>Flag</h2>
+      <pre><code>tjctf{steganography_is_fun}</code></pre>
+    </section>
+
+    <section class="writeup-conclusion">
+      <h2>Conclusion</h2>
+      <p>This challenge is an easy challenge on how to inspect an image given.</p>
+    </section>
+  </main>
+</body>
+</html>

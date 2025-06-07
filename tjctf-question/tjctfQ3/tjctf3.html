@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Challenge Writeups: footprint</title>
+  <link rel="stylesheet" href="tjctf.css" />
+</head>
+<body>
+  <header>
+    <h1>footprint</h1>
+    <p class="subtitle">TJCTF Category: Forensics</p>
+    <a href="../../tjctf-list/question.html?comp=tjctf" class="back-link">← Back to Questions</a>
+  </header>
+
+  <main>
+    <section class="writeup-intro">
+      <h2>Challenge Description</h2>
+      <p>The folder used to hold some important files — including one with the flag as its name.
+Unfortunately, all the files were deleted. Can you piece together the flag from what’s left behind?</p>
+    </section>
+
+    <section class="writeup-steps">
+  <h2>Writeup Steps</h2>
+  <ol>
+    
+    <li>
+      We are given a zip file named files.zip. Unzip it. Then we got files/.DS_Store 
+      <div class="img-box">
+        <img src="Q3_1.png" alt="file given">
+      </div>
+    </li>
+    
+      <li>
+      Activate the virtual environment, then install ds_store here
+      <div class="img-box">
+        <img src="Q3_2.png" alt="virtual env">
+        <p>Install ds_store</p>
+      </div>
+    </li>
+    <li>
+      Then write a script to read the .DS_Store, and we got a list of Strings
+      <div class="img-box">
+        <img src="Q3_3.png" alt="list of strings">
+        <img src="Q3_4.png" alt="script">
+        <p>python scripts</p>
+      </div>
+    </li>
+    <li>
+      Since there's lots of Strings, hence i choose to decode them.
+      <div class="img-box">
+        <img src="Q3_5.png" alt="decode">
+        <p>python script</p>
+        <img src="Q3_6.png" alt="decode">
+        <p>Flag is thereeee</p>
+      </div>
+    </li>
+    
+  </ol>
+</section>
+
+    <section class="writeup-flag">
+      <h2>Flag</h2>
+      <pre><code>tjctf{ds_store_is_useful?}</code></pre>
+    </section>
+
+    <section class="writeup-conclusion">
+      <h2>New Thing Learned</h2>
+      <ul>
+        <li>How to use virtual environment</li>
+        <li>How to deal with .DS_Store files</li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>

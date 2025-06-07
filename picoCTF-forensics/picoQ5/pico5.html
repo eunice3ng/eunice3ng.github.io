@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Challenge Writeup - Scan Surprise</title>
+  <link rel="stylesheet" href="pico1.css" />
+</head>
+<body>
+  <header>
+    <h1>Scan Surprise</h1>
+    <p class="subtitle">picoCTF — Difficulty: Easy</p>
+    <a href="../../picoCTF-list/question.html?comp=picoCTF" class="back-link">← Back to Questions</a>
+  </header>
+
+  <main>
+    <section class="writeup-intro">
+      <h2>Challenge Description</h2>
+      <p>I've gotten bored of handing out flags as text. Wouldn't it be cool if they were an image instead? You can download the challenge files here:
+
+    challenge.zip
+
+The same files are accessible via SSH here: ssh -p 64325 ctf-player@atlas.picoctf.net Using the password 84b12bae. 
+Accept the fingerprint with yes, and ls once connected to begin. Remember, in a shell, passwords are hidden! </p>
+    </section>
+
+    <section class="writeup-steps">
+  <h2>Writeup Steps</h2>
+  <ol>
+    <li>
+      Unzip the zip file given
+      <div class="img-box">
+        <img src="Q5_1.png" alt="unzip the file">
+        <p>A new folder is created</p>
+      </div>
+    </li>
+    <li>
+      Check the content or file extracted in the folder, and there's a QR code
+      <div class="img-box">
+        <img src="Q5_2.png" alt="Wireshark packet with == string">
+        
+      </div>
+    </li>
+    <li>
+      Can choose to scan the QR code using phone to get the flag. 
+      We can also use the tools to get the flag. Get into the correct directory, then execute <code>zbarimg</code> flag.png
+      <div class="img-box">
+        <img src="Q5_3.png" alt="get flag using tools">
+        <p>We got it!!</p>
+      </div>
+    </li>
+    
+  </ol>
+</section>
+
+    <section class="writeup-flag">
+      <h2>Flag</h2>
+      <pre><code>picoCTF{p33k_0_b00_0194a007}</code></pre>
+    </section>
+
+    <section class="writeup-conclusion">
+      <h2>New Thing Learn</h2>
+      <p>Use tool to scan QR</p>
+    </section>
+  </main>
+</body>
+</html>
